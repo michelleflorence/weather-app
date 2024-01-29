@@ -25,7 +25,7 @@ Follow the steps below to set up and run the Weather App on your local machine:
    - Replace the placeholder for the API key with the one you obtained.
     ```js
     // .env
-    const API_KEY = 'YOUR_VISUAL_CROSSING_API_KEY';
+    VITE_API_KEY = 'YOUR_VISUAL_CROSSING_API_KEY';
     ```
 5. Run the Application:
     ```js
