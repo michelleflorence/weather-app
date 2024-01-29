@@ -32,7 +32,7 @@ Follow the steps below to set up and run the Weather App on your local machine:
     npm run dev
     ```
 6. Access the Weather App:
-- Open your web browser and navigate to http://localhost:5173 to view the Weather App.
+   - Open your web browser and navigate to http://localhost:5173 to view the Weather App.
 
 # Features
 - Current Weather: Get real-time weather information for a specific location.
