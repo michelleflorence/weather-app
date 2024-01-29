@@ -34,10 +34,8 @@ function Home() {
 
   return (
     <div className="w-full h-screen text-white px-8">
-      <nav className="w-full p-3 flex justify-between items-center">
-        <h1 className="mt-5 font-bold tracking-wide text-2xl">
-          Weather Application
-        </h1>
+      <nav className="w-full p-5 flex justify-between items-center">
+        <h1 className="mt-5 font-bold tracking-wide text-xl">WEATHER-APP</h1>
         <div className="mt-5 bg-white w-96 h-47 overflow-hidden shadow-2xl rounded-full flex items-center p-2 gap-2">
           <img
             src={search}
@@ -88,7 +86,7 @@ function Home() {
           <Link to="/savedcities">
             <button
               onClick={saveCity}
-              className="bg-blue-700 rounded-lg hover:bg-blue-800 text-white px-8 py-2"
+              className="bg-blue-700 rounded-xl hover:bg-blue-800 text-white px-8 py-2"
             >
               Saved City
             </button>

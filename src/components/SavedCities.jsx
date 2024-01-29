@@ -13,16 +13,14 @@ const SavedCities = ({ cities }) => {
         backgroundSize: "cover",
       }}
     >
-      <div className="relative py-3 sm:max-w-xl sm:mx-auto">
+      <div className="flex py-3 items-center justify-center text-center sm:max-w-xl sm:mx-auto">
         <div
-          className="backdrop-blur-sm first-letter:relative px-4 py-10 bg-white/30 shadow-lg sm:rounded-3xl sm:p-20 border border-gray-200"
+          className="backdrop-blur-sm first-letter:relative bg-white/30 shadow-lg px-4 py-10 rounded-3xl sm:p-20 border border-gray-200"
           style={{
             backgroundColor: "rgba(255, 255, 255, 0.8)",
           }}
         >
-          <h2 className="text-xl font-semibold mb-8 text-center">
-            Saved Cities
-          </h2>
+          <h2 className="text-2xl font-bold mb-8 text-center">Saved Cities</h2>
 
           {/* Menampilkan daftar kota yang disimpan */}
           <ul className="list-disc space-y-2">
@@ -32,7 +30,7 @@ const SavedCities = ({ cities }) => {
                 {cities.map((city, index) => (
                   <div
                     key={index}
-                    className="px-6 py-2 rounded-md shadow-md mb-4 w-full max-h-48 overflow-hidden backdrop-blur-sm bg-white/30"
+                    className="w-full max-w-md max-h-48 px-6 py-1 rounded-full shadow-md mb-4 overflow-hidden backdrop-blur-sm bg-white/30"
                     style={{
                       backgroundColor: "rgba(0, 0, 0, 0.2)",
                     }}
@@ -46,7 +44,7 @@ const SavedCities = ({ cities }) => {
             {/* Tombol kembali ke halaman utama */}
             <div className="text-center">
               <Link to="/">
-                <button className="bg-sky-700 rounded-lg hover:bg-sky-800 text-white px-8 py-2">
+                <button className="bg-sky-700 rounded-xl hover:bg-sky-800 text-white px-8 py-2">
                   Back
                 </button>
               </Link>
