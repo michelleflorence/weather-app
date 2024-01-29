@@ -17,7 +17,7 @@ Follow the steps below to set up and run the Weather App on your local machine:
 3. Sign up for Visual Crossing API:
    - Visit the Visual Crossing Weather API website: [Visual Crossing Weather API](http://www.visualcrossing.com/weather-api)
    - Sign up for an account.
-   - Obtain your API key from the dashboard.
+   - Obtain your API key from the dashboard by sign up and make sure to subscribe the basic plan (free) so you can access the API.
   
 4. Configure API Key:
    - Open the Weather App project.
