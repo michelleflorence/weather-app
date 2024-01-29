@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./App.css";
 import search from "./assets/icons/search.png";
 import { useStateContext } from "./context";
@@ -6,22 +6,31 @@ import { BackgroundLayout, MiniCard, WeatherCard } from "./components";
 import { Link } from "react-router-dom";
 
 function Home() {
+  // Gunakan hook useState untuk mengelola state input
   const [input, setInput] = useState("");
+
+  // Destruktur nilai dari state global menggunakan useStateContext
   const { weather, location, values, setPlace, savedCities, setSavedCities } =
     useStateContext();
 
+  // Fungsi untuk menyimpan kota saat ini ke daftar kota yang disimpan
   const saveCity = () => {
-    // Jangan simpan kota yang sudah ada di daftar
+    // Periksa apakah lokasi saat ini belum ada dalam daftar
     if (!savedCities.includes(location)) {
       setSavedCities([...savedCities, location]);
     }
   };
-  // console.log(weather);
 
+  // Fungsi untuk menangani pengiriman kota saat tombol Enter ditekan
   const submitCity = () => {
+    // Tetapkan input saat ini sebagai lokasi baru
     setPlace(input);
+
+    // Bersihkan isian input
     setInput("");
   };
+
+  // console.log(weather);
 
   return (
     <div className="w-full h-screen text-white px-8">
@@ -37,8 +46,9 @@ function Home() {
           />
           <input
             onKeyUp={(e) => {
+              // Periksa apakah tombol Enter ditekan
               if (e.key === "Enter") {
-                // submit the form
+                // Jika ya, submit form
                 submitCity();
               }
             }}

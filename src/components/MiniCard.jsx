@@ -9,10 +9,13 @@ import wind from "../assets/icons/windy.png";
 import overcast from "../assets/icons/overcast.png";
 
 const MiniCard = ({ time, temp, iconString }) => {
+  // State untuk menyimpan ikon yang sesuai dengan kondisi cuaca
   const [icon, setIcon] = useState();
 
+  // useEffect akan dipanggil ketika iconString berubah
   useEffect(() => {
     if (iconString) {
+      // Logika untuk menentukan ikon cuaca berdasarkan string kondisi cuaca
       if (
         iconString.toLowerCase().includes("cloud") ||
         iconString.toLowerCase().includes("Partially cloudy")
@@ -38,6 +41,7 @@ const MiniCard = ({ time, temp, iconString }) => {
 
   return (
     <div className="glassCard w-[10rem] h-[10rem] p-4 flex flex-col">
+      {/* Menampilkan hari dari waktu yang diberikan */}
       <p className="text-center">
         {
           new Date(time)
@@ -45,14 +49,19 @@ const MiniCard = ({ time, temp, iconString }) => {
             .split(" ")[0]
         }
       </p>
+
       <hr />
+
+      {/* Menampilkan ikon cuaca */}
       <div className="w-full flex justify-center items-center flex-1">
         <img
           src={icon}
-          alt="forecast not available"
+          alt="icon forecast not available"
           className="w-16 h-w-16 flex-shrink-0"
         />
       </div>
+
+      {/* Menampilkan suhu dalam derajat Celsius */}
       <p className="text-center font-bold">{temp}&deg;C</p>
     </div>
   );

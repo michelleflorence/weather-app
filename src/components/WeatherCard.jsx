@@ -10,9 +10,13 @@ import wind from "../assets/icons/windy.png";
 import "../index.css";
 
 const WeatherCard = ({ temperature, place, iconString, conditions }) => {
+  // State untuk menyimpan ikon cuaca berdasarkan kondisi
   const [icon, setIcon] = useState(sun);
+
+  // Menggunakan custom hook useDate untuk mendapatkan waktu saat ini
   const { time } = useDate();
 
+  // useEffect untuk memperbarui ikon berdasarkan kondisi cuaca
   useEffect(() => {
     if (iconString) {
       if (iconString.toLowerCase().includes("cloud")) {
@@ -35,6 +39,7 @@ const WeatherCard = ({ temperature, place, iconString, conditions }) => {
 
   return (
     <div className="w-[25rem] min-w-[25rem] h-[22rem] glassCard p-4">
+      {/* Bagian untuk menampilkan ikon dan suhu */}
       <div className="flex w-full justify-center items-center gap-4 mt-12 mb-4">
         <img
           src={icon}
@@ -46,8 +51,10 @@ const WeatherCard = ({ temperature, place, iconString, conditions }) => {
         </p>
       </div>
 
+      {/* Menampilkan nama tempat */}
       <div className="font-bold text-center text-xl">{place}</div>
 
+      {/* Menampilkan tanggal dan waktu */}
       <div className="w-full flex justify-between items-center mt-4">
         <p className="flex-1 text-center p-2">{new Date().toDateString()}</p>
         <p className="flex-1 text-center p-2">{time}</p>
@@ -55,6 +62,7 @@ const WeatherCard = ({ temperature, place, iconString, conditions }) => {
 
       <hr className="bg-slate-600" />
 
+      {/* Menampilkan kondisi cuaca */}
       <div className="w-full p-4 flex justify-center items-center text-3xl font-semibold">
         {conditions}
       </div>

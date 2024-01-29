@@ -8,10 +8,15 @@ import Snow from "../assets/images/Snow.png";
 import Stormy from "../assets/images/Stormy.jpg";
 
 const BackgroundLayout = () => {
+  // Gunakan context untuk mendapatkan data cuaca
   const { weather } = useStateContext();
+
+  // State untuk menyimpan gambar latar belakang yang sesuai dengan kondisi cuaca
   const [image, setImage] = useState(Clear);
 
+  // useEffect akan dipanggil ketika weather berubah
   useEffect(() => {
+    // Logika untuk menentukan gambar latar belakang berdasarkan kondisi cuaca
     if (weather.conditions) {
       let imageString = weather.conditions;
 
@@ -38,6 +43,7 @@ const BackgroundLayout = () => {
   }, [weather]);
 
   // console.log(weather)
+
   return (
     <img
       src={image}

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 const SavedCities = ({ cities }) => {
   return (
+    // Background Image
     <div
       className="w-full h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12"
       style={{
@@ -22,9 +23,12 @@ const SavedCities = ({ cities }) => {
           <h2 className="text-xl font-semibold mb-8 text-center">
             Saved Cities
           </h2>
+
+          {/* Menampilkan daftar kota yang disimpan */}
           <ul className="list-disc space-y-2">
             <li className="flex items-start">
               <div className="flex flex-col items-center justify-center text-center">
+                {/* Mapping untuk setiap kota */}
                 {cities.map((city, index) => (
                   <div
                     key={index}
@@ -38,6 +42,8 @@ const SavedCities = ({ cities }) => {
                 ))}
               </div>
             </li>
+
+            {/* Tombol kembali ke halaman utama */}
             <div className="text-center">
               <Link to="/">
                 <button className="bg-sky-700 rounded-lg hover:bg-sky-800 text-white px-8 py-2">
