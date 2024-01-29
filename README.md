@@ -15,7 +15,7 @@ Follow the steps below to set up and run the Weather App on your local machine:
     npm install 
     ```
 3. Sign up for Visual Crossing API:
-   - Visit the Visual Crossing Weather API website: Visual Crossing Weather API
+   - Visit the Visual Crossing Weather API website: [Visual Crossing Weather API](http://www.visualcrossing.com/weather-api)
    - Sign up for an account.
    - Obtain your API key from the dashboard.
   
