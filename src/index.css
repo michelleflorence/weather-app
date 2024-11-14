@@ -38,20 +38,19 @@
 
   .weather-card-icon {
     display: flex;
+  }
 
-    .weather-card-temperature {
-      font-size: 36px;
-    }
+  .weather-card-temperature {
+    font-size: 36px;
   }
 
   .weather-card-place {
     font-size: 18px;
   }
 
-  .weather-card-time-container {
-    .weather-card-date, .weather-card-time {
-      font-size: 14px;
-    }
+  .weather-card-date,
+  .weather-card-time {
+    font-size: 14px;
   }
 
   .weather-card-condition {
