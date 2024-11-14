@@ -34,9 +34,14 @@ function Home() {
 
   return (
     <div className="w-full h-screen text-white px-8">
-      <nav className="w-full p-5 flex justify-between items-center">
-        <h1 className="mt-5 font-bold tracking-wide text-xl">WEATHER-APP</h1>
-        <div className="mt-5 bg-white w-96 h-47 overflow-hidden shadow-2xl rounded-full flex items-center p-2 gap-2">
+      <nav className="nav-container w-full p-5 flex justify-between items-center">
+        <h1
+          className="weather-app-text mt-5 font-bold tracking-wide text-xl"
+          style={{ width: "100%" }}
+        >
+          WEATHER-APP
+        </h1>
+        <div className="search-bar mt-5 bg-white w-96 h-47 overflow-hidden shadow-2xl rounded-full flex items-center p-2 gap-2">
           <img
             src={search}
             alt="search"
@@ -61,7 +66,7 @@ function Home() {
 
       <BackgroundLayout />
 
-      <main className="w-full flex flex-wrap gap-8 py-10 px-[10%] items-center justify-center">
+      <main className="main-content w-full flex flex-wrap gap-8 py-10 px-[10%] items-center justify-center">
         <WeatherCard
           place={location}
           temperature={weather.temp}

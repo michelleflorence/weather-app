@@ -40,7 +40,7 @@ const MiniCard = ({ time, temp, iconString }) => {
   }, [iconString]);
 
   return (
-    <div className="glassCard w-[10rem] h-[10rem] p-4 flex flex-col">
+    <div className="glass-card-mini-card w-[10rem] h-[10rem] p-4 flex flex-col md:w-[8rem] md:h-[8rem] lg:w-[10rem] lg:h-[10rem]">
       {/* Menampilkan hari dari waktu yang diberikan */}
       <p className="text-center">
         {
@@ -50,19 +50,21 @@ const MiniCard = ({ time, temp, iconString }) => {
         }
       </p>
 
-      <hr />
+      <hr className="my-2 md:my-1 lg:my-2" />
 
       {/* Menampilkan ikon cuaca */}
       <div className="w-full flex justify-center items-center flex-1">
         <img
           src={icon}
           alt="icon forecast not available"
-          className="w-16 h-w-16 flex-shrink-0"
+          className="w-16 h-16 flex-shrink-0 md:w-12 md:h-12 lg:w-16 lg:h-16"
         />
       </div>
 
       {/* Menampilkan suhu dalam derajat Celsius */}
-      <p className="text-center font-bold">{temp}&deg;C</p>
+      <p className="text-center font-bold text-xl md:text-lg lg:text-xl">
+        {temp}&deg;C
+      </p>
     </div>
   );
 };

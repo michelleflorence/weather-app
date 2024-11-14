@@ -38,32 +38,36 @@ const WeatherCard = ({ temperature, place, iconString, conditions }) => {
   }, [iconString]);
 
   return (
-    <div className="w-[25rem] min-w-[25rem] h-[22rem] glassCard p-4">
+    <div className="glass-card-weather-card w-[25rem] h-[22rem] p-4">
       {/* Bagian untuk menampilkan ikon dan suhu */}
-      <div className="flex w-full justify-center items-center gap-4 mt-12 mb-4">
+      <div className="weather-card-icon flex w-full justify-center items-center gap-4 mt-12 mb-4">
         <img
           src={icon}
           alt="weatherIcon"
           className="w-16 h-w-16 flex-shrink-0"
         />
-        <p className="font-bold text-5xl flex justify-center items-center">
+        <p className="weather-card-temperature font-bold text-5xl flex justify-center items-center">
           {temperature} &deg;C
         </p>
       </div>
 
       {/* Menampilkan nama tempat */}
-      <div className="font-bold text-center text-xl">{place}</div>
+      <div className="weather-card-place font-bold text-center text-xl">
+        {place}
+      </div>
 
       {/* Menampilkan tanggal dan waktu */}
-      <div className="w-full flex justify-between items-center mt-4">
-        <p className="flex-1 text-center p-2">{new Date().toDateString()}</p>
-        <p className="flex-1 text-center p-2">{time}</p>
+      <div className="weather-card-time-container w-full flex justify-between items-center mt-4">
+        <p className="weather-card-date flex-1 text-center p-2">
+          {new Date().toDateString()}
+        </p>
+        <p className="weather-card-time flex-1 text-center p-2">{time}</p>
       </div>
 
       <hr className="bg-slate-600" />
 
       {/* Menampilkan kondisi cuaca */}
-      <div className="w-full p-4 flex justify-center items-center text-3xl font-semibold">
+      <div className="weather-card-condition w-full p-4 flex justify-center items-center text-3xl font-semibold">
         {conditions}
       </div>
     </div>
