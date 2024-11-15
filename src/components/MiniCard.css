@@ -1,0 +1,11 @@
+@media (max-width: 576px) {
+  .mini-card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem; /* Adjust the gap as needed */
+  }
+
+  .glass-card-mini-card {
+    width: 100% !important;
+  }
+}

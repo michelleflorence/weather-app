@@ -53,7 +53,7 @@ const MiniCard = ({ time, temp, iconString }) => {
       <hr className="my-2 md:my-1 lg:my-2" />
 
       {/* Menampilkan ikon cuaca */}
-      <div className="w-full flex justify-center items-center flex-1">
+      <div className="weather-icon w-full flex justify-center items-center flex-1">
         <img
           src={icon}
           alt="icon forecast not available"

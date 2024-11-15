@@ -74,7 +74,7 @@ function Home() {
           conditions={weather.conditions}
         />
 
-        <div className="flex justify-center gap-8 flex-wrap w-full md:flex-row">
+        <div className="mini-card-container flex justify-center gap-8 flex-wrap w-full md:flex-row">
           {values?.slice(1, 6).map((curr) => {
             return (
               <MiniCard
