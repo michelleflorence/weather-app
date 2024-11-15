@@ -34,7 +34,7 @@ function Home() {
 
   return (
     <div className="home-container w-full h-screen text-white px-20 items-center">
-      <nav className="nav-container w-full p-8 flex justify-between items-center">
+      <nav className="nav-container w-full py-4 px-8 flex justify-between items-center">
         <h1
           className="weather-app-text mt-5 font-bold tracking-wide text-xl"
           style={{ width: "100%" }}
@@ -66,7 +66,7 @@ function Home() {
 
       <BackgroundLayout />
 
-      <main className="main-content w-full flex flex-wrap gap-8 py-10 px-[10%] items-center justify-center">
+      <main className="main-content w-full flex flex-wrap gap-8 py-4 items-center justify-center">
         <WeatherCard
           place={location}
           temperature={weather.temp}
