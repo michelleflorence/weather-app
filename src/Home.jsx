@@ -33,7 +33,7 @@ function Home() {
   // console.log(weather);
 
   return (
-    <div className="w-full h-screen text-white px-8">
+    <div className="home-container w-full h-screen text-white px-20">
       <nav className="nav-container w-full p-5 flex justify-between items-center">
         <h1
           className="weather-app-text mt-5 font-bold tracking-wide text-xl"
